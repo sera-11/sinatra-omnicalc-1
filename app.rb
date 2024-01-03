@@ -3,7 +3,34 @@ require "sinatra/reloader"
 
 get("/") do
   "
-  <h1>Welcome to your Sinatra App!</h1>
-  <p>Define some routes in app.rb</p>
+  <form action='/square/results'>
+    <label for='user_number'>Enter a number</label>
+    <input id='user_number' name='number' placeholder='What number do you want to take the square of?'>
+    <button>Calculate square</button>
+  </form>
+
   "
+end
+
+get("/square/new") do
+  "
+  <form action='/square/results'>
+    <label for='user_number'>Enter a number</label>
+    <input id='user_number' name='number' placeholder='What number do you want to take the square of?'>
+    <button>Calculate square</button>
+  </form>
+
+  "
+end
+
+get("/square_root/new") do
+  "Code"
+end
+
+get("/random/new") do
+  "Code"
+end
+
+get("payment/new") do
+  "Code"
 end
