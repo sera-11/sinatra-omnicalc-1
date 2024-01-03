@@ -3,28 +3,26 @@ require "sinatra/reloader"
 
 get("/") do
   "
-  <form action='/square/results'>
-    <label for='user_number'>Enter a number</label>
-    <input id='user_number' name='number' placeholder='What number do you want to take the square of?'>
-    <button>Calculate square</button>
-  </form>
+  
 
   "
+  erb(:square_new)
+
 end
 
 get("/square/new") do
   "
-  <form action='/square/results'>
-    <label for='user_number'>Enter a number</label>
-    <input id='user_number' name='number' placeholder='What number do you want to take the square of?'>
-    <button>Calculate square</button>
-  </form>
 
   "
+  erb(:square_new)
 end
 
 get("/square/results") do
-  "Code"
+  @num = params.fetch("number").to_i
+  @results = @num * @num
+  
+
+  erb(:square_results)
 end
 
 get("/square_root/new") do
