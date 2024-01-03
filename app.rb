@@ -23,6 +23,10 @@ get("/square/new") do
   "
 end
 
+get("/square/results") do
+  "Code"
+end
+
 get("/square_root/new") do
   "Code"
 end
