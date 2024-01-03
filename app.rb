@@ -20,6 +20,7 @@ end
 get("/square/results") do
   @num = params.fetch("number").to_i
   @results = @num * @num
+  @results = @results.to_f
   
 
   erb(:square_results)
