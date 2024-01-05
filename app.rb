@@ -27,7 +27,11 @@ get("/square/results") do
 end
 
 get("/square_root/new") do
-  "Code"
+  erb(:square_root)
+end
+
+get("/square_root/results") do
+
 end
 
 get("/random/new") do
