@@ -31,13 +31,17 @@ get("/square_root/new") do
 end
 
 get("/square_root/results") do
+  @num = params.fetch("number").to_i
+  @results = Math.sqrt(@num)
+  @results = @results.to_f
 
+  erb(:square_root_results)
 end
 
 get("/random/new") do
   "Code"
 end
 
-get("payment/new") do
+get("/payment/new") do
   "Code"
 end
