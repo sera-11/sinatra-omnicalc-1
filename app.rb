@@ -66,12 +66,22 @@ get("/payment/results") do
   @formatted_payment = format("$%.2f", @payment)
 
 
-
-
-
   erb(:payment_results)
 end
 
 get("/random/new") do
-  "Code"
+  erb(:random)
+end
+
+get("/random/results") do
+
+  @min = params.fetch("user_min").to_f
+  @max = params.fetch("user_max").to_f
+
+  @random = rand(@min..@max)
+
+
+
+
+  erb(:random_results)
 end
